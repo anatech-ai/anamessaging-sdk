@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anamessaging"
+version = "1.0.0"
+description = "Official ANA Messaging SDK for Python - send WhatsApp and SMS through the ANA Messaging API (Odoo, ERPNext, Django, scripts)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = []
+keywords = ["anamessaging", "whatsapp", "sms", "sdk", "odoo", "erpnext", "frappe"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://anamessaging.com"
+Documentation = "https://api.anamessaging.com/api/v1/anamsg/docs"
+
+[tool.setuptools]
+packages = ["anamessaging"]
+
+[tool.setuptools.package-data]
+anamessaging = ["py.typed"]

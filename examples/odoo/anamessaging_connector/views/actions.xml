@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_ana_sale_whatsapp" model="ir.actions.server">
+        <field name="name">Send WhatsApp (ANA Messaging)</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">action = records.action_ana_send_whatsapp()</field>
+    </record>
+    <record id="action_ana_invoice_whatsapp" model="ir.actions.server">
+        <field name="name">Send invoice on WhatsApp (ANA Messaging)</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">action = records.action_ana_send_invoice_whatsapp()</field>
+    </record>
+    <record id="action_ana_invoice_sms" model="ir.actions.server">
+        <field name="name">Send SMS payment reminder (ANA Messaging)</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">action = records.action_ana_send_sms_reminder()</field>
+    </record>
+</odoo>

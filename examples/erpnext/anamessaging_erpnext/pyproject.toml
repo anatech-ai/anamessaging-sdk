@@ -1,0 +1,10 @@
+[project]
+name = "anamessaging_erpnext"
+version = "1.0.0"
+description = "Send WhatsApp and SMS from ERPNext through ANA Messaging"
+requires-python = ">=3.10"
+dependencies = ["anamessaging>=1.0.0"]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"

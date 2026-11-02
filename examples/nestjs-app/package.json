@@ -1,0 +1,16 @@
+{
+  "name": "anamessaging-nestjs-example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "ts-node src/main.ts" },
+  "dependencies": {
+    "@anamessaging/sdk": "^1.0.0",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/platform-express": "^11.1.6",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": { "ts-node": "^10.9.2", "typescript": "^5.9.3" }
+}

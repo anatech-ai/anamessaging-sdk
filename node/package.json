@@ -1,0 +1,45 @@
+{
+  "name": "@anamessaging/sdk",
+  "version": "1.0.0",
+  "description": "Official ANA Messaging SDK for Node.js, TypeScript and NestJS - send WhatsApp and SMS through the ANA Messaging API",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./nestjs": {
+      "types": "./dist/nestjs/index.d.ts",
+      "require": "./dist/nestjs/index.js",
+      "import": "./dist/nestjs/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && node scripts/write-esm.js",
+    "test": "npm run build && node --test test/*.test.js test/*.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": ["anamessaging", "whatsapp", "sms", "sdk", "nestjs", "erp", "odoo", "erpnext"],
+  "peerDependencies": {
+    "@nestjs/common": ">=9",
+    "reflect-metadata": ">=0.1"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/common": { "optional": true },
+    "reflect-metadata": { "optional": true }
+  },
+  "devDependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/testing": "^11.1.6",
+    "@types/node": "^22.15.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "typescript": "^5.9.3"
+  }
+}

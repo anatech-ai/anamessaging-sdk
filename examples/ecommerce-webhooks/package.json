@@ -1,0 +1,10 @@
+{
+  "name": "anamessaging-ecommerce-webhooks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shopify / WooCommerce / generic store webhooks -> WhatsApp + SMS via ANA Messaging",
+  "type": "module",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "@anamessaging/sdk": "^1.0.0" }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_anamessaging" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.anamessaging</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="ANA Messaging" name="anamessaging_connector">
+                    <block title="ANA Messaging API" name="anamessaging_block">
+                        <setting string="Credentials" help="Issued on anamessaging.com (Settings → API Keys) with an active subscription.">
+                            <field name="ana_client_id"/>
+                            <field name="ana_client_secret" password="True"/>
+                            <field name="ana_base_url"/>
+                        </setting>
+                        <setting string="Templates">
+                            <field name="ana_order_template"/>
+                            <field name="ana_invoice_template"/>
+                            <field name="ana_auto_order"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
